@@ -1,3 +1,5 @@
+// p. 191, ex. 1
+
 struct Fruit {
     apples: i32,
     bananas: i32,
