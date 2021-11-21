@@ -1,3 +1,5 @@
+// p. 224, ex. 7
+
 struct RunningTotal {
     total: i32,
     count: i32,
