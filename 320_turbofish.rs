@@ -1,4 +1,4 @@
-// p.317 Turbofish!
+// p.320 Turbofish!
 
 fn main() {
     let size = std::mem::size_of::<[i32; 5]>();
