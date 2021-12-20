@@ -7,12 +7,14 @@ struct Person<Name, Age> {
     age: Age,
 }
 
-fn greet<Name, Age>(person: &Person<Name, Age>)
+impl<Name, Age> Person<Name, Age>
 where
     Name: Display,
     Age: Display,
 {
-    println!("Hello, {}, you are {} years old.", person.name, person.age);
+    fn greet(&self) {
+        println!("Hello, {}, you are {} years old.", self.name, self.age)
+    }
 }
 
 trait AddOne {
@@ -43,11 +45,11 @@ fn main() {
         age: 30_u32,
     };
     alice.older();
-    greet(&alice);
+    alice.greet();
     let mut bob: Person<String, u64> = Person {
         name: "Bob".to_owned(),
         age: 35_u64,
     };
     bob.older();
-    greet(&bob);
+    bob.greet();
 }
