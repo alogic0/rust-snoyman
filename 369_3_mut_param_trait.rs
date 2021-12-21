@@ -1,4 +1,4 @@
-// p. 368, ex. 3, mutable parameters and trait
+// p. 369, ex. 3, mutable parameters and trait
 
 use std::fmt::Display;
 
