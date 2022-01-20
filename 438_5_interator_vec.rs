@@ -2,10 +2,12 @@
 
 fn average(scores: &Vec<usize>) -> usize {
     let mut result: usize = 0;
-    for i in scores {
+    let mut counter: usize = 0;
+    for (c, i) in scores.iter().enumerate() {
         result += i;
+        counter = c;
     }
-    result / scores.len()
+    result / (counter + 1)
 }
 fn main() {
     let physics = vec![53, 64, 73, 36, 96, 100, 45, 81, 88, 64];
